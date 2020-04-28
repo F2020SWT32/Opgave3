@@ -31,7 +31,7 @@ namespace Microwave.Test.Integration
         [Test]
         public void CookControllerTest()
         {
-            _uut.StartCooking(0, 1);
+            _uut.StartCooking(0, 2);
             Thread.Sleep(1000);
 
             Received.InOrder(() =>
