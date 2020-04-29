@@ -103,7 +103,6 @@ namespace Microwave.Test.Integration
                 _powerTube.TurnOff();
             });
 
-
         }
     }
 }
