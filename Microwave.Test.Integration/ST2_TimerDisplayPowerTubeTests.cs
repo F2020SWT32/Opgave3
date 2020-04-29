@@ -33,9 +33,9 @@ namespace Microwave.Test.Integration
             _uut            = new CookController(_timer, _display, _powerTube, _ui);
         }
 
-        [TestCase(0, 1)]
         [TestCase(50, 1)]
-        [TestCase(0, 3)]
+        [TestCase(700, 1)]
+        [TestCase(50, 3)]
         [TestCase(700, 3)]
         public void CookControllerTest(int power, int seconds)
         {
@@ -58,9 +58,9 @@ namespace Microwave.Test.Integration
             });
         }
 
-        [TestCase(0, 1)]
         [TestCase(50, 1)]
-        [TestCase(0, 3)]
+        [TestCase(700, 1)]
+        [TestCase(50, 3)]
         [TestCase(700, 3)]
         public void CookControllerTestExt3(int power, int seconds)
         {
@@ -90,9 +90,9 @@ namespace Microwave.Test.Integration
 
         }
 
-        [TestCase(0, 1)]
         [TestCase(50, 1)]
-        [TestCase(0, 3)]
+        [TestCase(700, 1)]
+        [TestCase(50, 3)]
         [TestCase(700, 3)]
         public void CookControllerTestExt4(int power, int seconds)
         {
