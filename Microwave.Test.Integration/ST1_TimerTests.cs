@@ -69,7 +69,7 @@ namespace Microwave.Test.Integration
             {
                 _powerTube.TurnOn(power);
 
-                for (int i = (abortAfterms/1000) - 1; i >= 0; i--)
+                for (int i = seconds - 1; i >= Math.Ceiling(abortAfterms / 1000.0); i--)
                     _display.ShowTime(i / 60, i % 60);
 
                 _powerTube.TurnOff();
@@ -97,7 +97,7 @@ namespace Microwave.Test.Integration
             {
                 _powerTube.TurnOn(power);
 
-                for (int i = (abortAfterms / 1000) - 1; i >= 0; i--)
+                for (int i = seconds - 1; i >= Math.Ceiling(abortAfterms / 1000.0); i--)
                     _display.ShowTime(i / 60, i % 60);
 
                 _powerTube.TurnOff();
