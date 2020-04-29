@@ -35,7 +35,7 @@ namespace Microwave.Test.Integration
         public void CookControllerTest(int power, int seconds)
         {
             _uut.StartCooking(power, 1000*seconds);
-            Thread.Sleep(1000*seconds);
+            Thread.Sleep(100 + 1000 * seconds);
 
             Received.InOrder(() =>
             {
@@ -63,7 +63,7 @@ namespace Microwave.Test.Integration
 
             _uut.Stop();
 
-            Thread.Sleep((seconds * 1000) - abortAfterms);
+            Thread.Sleep(100 + (seconds * 1000) - abortAfterms);
 
             Received.InOrder(() =>
             {
@@ -74,7 +74,6 @@ namespace Microwave.Test.Integration
 
                 _powerTube.TurnOff();
             });
-
 
         }
 
@@ -92,7 +91,7 @@ namespace Microwave.Test.Integration
 
             _uut.Stop();
 
-            Thread.Sleep((seconds*1000) - abortAfterms);
+            Thread.Sleep(100 + (seconds *1000) - abortAfterms);
 
             Received.InOrder(() =>
             {
