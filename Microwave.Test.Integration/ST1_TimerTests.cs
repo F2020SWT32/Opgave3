@@ -34,7 +34,7 @@ namespace Microwave.Test.Integration
         [TestCase(700, 3)]
         public void CookControllerTest(int power, int seconds)
         {
-            _uut.StartCooking(power, 1000*seconds);
+            _uut.StartCooking(power, seconds);
             Thread.Sleep(100 + 1000 * seconds);
 
             Received.InOrder(() =>
@@ -55,7 +55,7 @@ namespace Microwave.Test.Integration
         [TestCase(700, 3)]
         public void CookControllerTestExt3(int power, int seconds)
         {
-            _uut.StartCooking(power, 1000 * seconds);
+            _uut.StartCooking(power, seconds);
 
             int abortAfterms = (1000 * seconds) / 2;
 
@@ -83,7 +83,7 @@ namespace Microwave.Test.Integration
         [TestCase(700, 3)]
         public void CookControllerTestExt4(int power, int seconds)
         {
-            _uut.StartCooking(power, 1000 * seconds);
+            _uut.StartCooking(power, seconds);
 
             int abortAfterms = (1000 * seconds) / 2;
 
